@@ -1,0 +1,665 @@
+main {
+    margin-top: 40px;
+}
+
+header {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    padding: 0 4rem;
+    position: absolute;
+    top: 0;
+}
+
+body.dark-mode header {
+    background-color: #333333;
+    color: #fff;
+}
+
+header > h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #234876;
+}
+
+nav ul {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 40px;
+    margin-left: 40px;
+    
+}
+
+  /*
+I tried this solution of Brian's to center the nav list items, but it didn't work. I'm not sure why. I'm using Chrome.
+
+ul {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}*/
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem auto 0 auto;
+    background-color: var(--cream);
+    justify-content: center;
+    align-items: center;
+}
+
+main > h1 {
+    color: #FFA500;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+  
+}
+
+h3 {
+    font-size: 1rem;
+  
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+footer {
+    border-radius: 5px;
+    border: 2px solid #333333;
+    background-color: #234876;
+    color: #CCCCCC;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    grid-column: 1 / 4;    
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;                                                 
+}
+
+footer img {
+    height: 100px;
+    width: 360px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px) scaleX(1.25);
+    }
+
+    10% {
+        transform: translateY(-20px) scaleX(1);
+    }
+
+    50% {
+        transform: translateY(-50px) scaleX(.75);
+    }
+
+    75% {
+        transform: translateY(-75px) scale (.85);
+    }
+
+    100% {
+        transform: translateY(-100px) scaleX(1);
+    }
+}
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ball {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #FFA500;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+} 
+
+.ball2 {
+    height: 30px;
+    width: 30px;
+    border-radius: 40%;
+    background-color: #234876;
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-delay: .5s;
+}
+
+
+
+
+
+/*---this is media queries below-----*/
+
+/*@media screen and (min-width: 769px) {
+    body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem auto 0 auto;
+        background-color: var(--cream);
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        align-items: flex-start;
+        padding: 4rem;
+    }
+
+    header img {
+        margin: 0;
+    }
+
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25;
+}
+    main {
+        display: grid;
+        grid-template: auto / 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1320px) {
+    header img {
+        min-width: 400px;
+        height: auto;
+    }
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 1.5;
+}
+    main {
+        width: 90%;
+        grid-template-columns: 35% 35% 20%;
+        grid-template-rows: 2;
+        grid-gap: 2rem;
+        margin-top: 3rem;
+    }
+
+
+    article {
+        display: grid;
+
+
+    }
+
+    #one {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-self: start;
+
+    }
+
+    #two {
+        grid-column: 2 / 4;
+        grid-row: 1 /2;
+        margin-bottom: 2rem;
+    }
+
+    #three {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #four {
+        grid-column: 2 / 3;
+        grid-row: 2;
+    }
+
+    #five {
+        grid-column: 3 / 4;
+        align-self: start;
+
+
+
+    }
+}
+
+
+@media screen and (min-width: 1550px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+    main {
+        grid-template-columns: 25% 35% 35%;
+        grid-gap: 3rem;
+        margin-bottom: 4rem;
+    }
+    #one {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-self: start;
+
+    }
+    #two {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+
+    #three {
+        grid-column: 3;
+        grid-row: 1;
+
+    }
+
+    #four {
+        grid-column: 2 / 4;
+        grid-row: 2;
+    }
+
+    #five {
+        grid-column: 1;
+        align-self: start;
+
+    }
+}*/
+
+
+/* Add specific styles for each page as needed */
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #234876;
+    color: #ecf0f1;
+}
+
+/* CSS Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Flexbox */
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/** CONTACT PAGE **/
+.background-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    /* Places the background image behind other content */
+  }
+
+  .background-image.contact {
+    background-image: url('../images/Futuristic\ factory.jpeg');
+  }
+
+  .background-image.calc {
+    background-image: url('../images/picture\ of\ calculations.jpg');
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+/*create a button for submit with hover*/
+  button {
+    background-color: #234876;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #FFA500;
+  }
+
+/*this is the code for the animation*/
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: 3px solid #3c3c3c;
+    border-radius: 50%;
+    color: #FFA500;
+
+  }
+
+  .ring:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid #FFA500;
+    border-right: 3px solid #FFA500;
+    border-radius: 50%;
+    animation: animateC 2s linear infinite;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 2s linear infinite;
+  }
+
+  span:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #FFA500;
+    top: -6px;
+    right: -8px;
+
+  }
+
+  @keyframes animateC {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(45deg);
+    }
+
+    100% {
+      transform: rotate(405deg);
+    }
+  }
+
+  h1 {
+    color: #CCCCCC;
+    text-align: center;
+  }
+
+  .ring2 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: 3px solid #3c3c3c;
+    border-radius: 50%;
+    color: #CCCCCC;
+
+  }
+
+  .ring2:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid #CCCCCC;
+    border-right: 3px solid #CCCCCC;
+    border-radius: 50%;
+    animation: animateC 2s linear infinite;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 2s linear infinite;
+  }
+
+  span:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #CCCCCC;
+    top: -6px;
+    right: -8px;
+
+  }
+
+  @keyframes animateC {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(45deg);
+    }
+
+    100% {
+      transform: rotate(405deg);
+    }
+  }
+
+  /*begin with the calculator style sheet*/
+
+  #inputNumberButton {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 25px;
+    
+}
+
+#calculator {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+/*create the calculator buttons*/
+#conversionButtons {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conversionButton {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+
+#outputResultText {
+    width: 100%;
+}
+
+#outputResultButton {
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*create the input number button*/
+#inputNumber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*this is the css code for the progress bar*/
+.progress{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    border: 10px solid #FFA500;
+    border-radius: 15px;
+}
+.progress .color{
+    position: absolute;
+    background-color: #CCCCCC;
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}
+/*this is the css code for the modal*/
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-overlay.active {
+    display: block;
+}
+
+@keyframes progres{
+    0%{
+        width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Imaginary Solutions</title>
+    <style>
+        body {
+            font-family: 'Verdana', Avenir, PT Sans;
+        }
+    </style>
+</head>
+
+<header>
+    <h1>Imaginary Solutions</h1>
+    <!--Use a href links to link each page together-->
+    <nav>
+        <!--use an unordered list within the nav for all pages-->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+    <!--each page must have a dark mode option.  Create a class for this so you can address it in js and css-->
+    <div class="switch">
+        <label for="switch">Dark Mode</label>
+        <input type="checkbox" id="switch">
+    </div>
+</header>
+
+<main> <!--Place a background image in behind the contact card with an z index-->
+    <div class="background-image contact">
+    </div>
+
+    <body><!--create a container for the contact card-->
+        <div class="container">
+            <h1>Contact Us</h1>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="Company Name">Company Name:</label>
+                <input type="text" id="Company Name" name="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone number">Phone Number:</label>
+                <input type="number" id="Phone Number" name="name" required>
+
+                <label for="How did you hear about us?">How did you hear about us?:</label>
+                <input type="text" id="How did you hear about us?" name="name">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </body>
+</main>
+<footer><!--place an animation in the footer-->
+    <div class="ring">
+        <span></span>
+    </div>
+
+    <div class="ring2">
+        <span></span>
+    </div>
+</footer>
+
+</html>

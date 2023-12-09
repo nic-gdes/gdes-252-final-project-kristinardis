@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conversion Calculator</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="./assets/scripts/script.js" defer></script>
+</head>
+<header>
+    <h1>Imaginary Solutions</h1>
+    <!--Create the nav bar for three separate pages.  Use a href links-->
+    <nav>
+        <!--use an unordered list within the nav for each page-->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+    <!--each page must have a dark mode option.  Create a class for this so you can address it in js and css-->
+    <div class="switch">
+        <label for="switch">Dark Mode</label>
+        <input type="checkbox" id="switch">
+    </div>
+</header>
+<main>
+    <div class="background-image calc">
+    </div> 
+<body>
+    <h1>Conversion Calculator</h1>
+
+    <!--create large div to contain all of the boxes for numbers, input, output-->
+    <div id="calculator">
+        <!--create separate divs for each action so I can assign the correct javascript to it-->
+        <div id ="inputNumber">
+            <h2>Input Number</h2>
+            <input type="number" id="inputNumberText" placeholder="Enter a number" />
+        </div>    
+
+        <div id="conversionButtons">
+            <button class="conversionButton" onclick="convert('fahrenheit')">Fahrenheit to Centigrade</button>
+            <button class="conversionButton" onclick="convert('feet')">Feet to Miles</button>
+            <button class="conversionButton" onclick="convert('inches')">Inches to Centimeters</button>
+        </div>
+    </div>
+<!--create a div for the modal which will be hidden until the user clicks on the button and it will display the output-->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-container">
+            <div id="outputResult">
+                <h2>Answer Output</h2>
+                <input type="text" id="outputResultText" readonly />
+            </div>
+            <div id="reset">
+                <button id="clearButton" onclick="reset()">reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="progress">
+        <div class="color"></div>
+    </div>  
+</footer>
+</main>
+</html>
